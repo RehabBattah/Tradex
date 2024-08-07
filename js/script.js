@@ -38,4 +38,8 @@ $(document).ready(function () {
         loop:true,
         autoplay:true
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> f9316cbcaecb48c0b7083a86205dbd2d815aae83
