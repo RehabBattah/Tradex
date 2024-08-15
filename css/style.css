@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap');
+:root {
+    --primaryColor: #0c65ed;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+/* NAVBAR  */
+.up-nav{background-color: var(--primaryColor);}
+.up-nav span{font-size: .9rem;}
+.navbar {
+    height: 6rem;
+}
+/* HEADER  */
+.header .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: .8;
+    z-index: 1;
+}
+.header .carousel-inner .text {
+    position: absolute;
+    z-index: 2;
+    min-height: calc(100vh - 5rem);
+}
+.header .carousel-inner .text .h2 {
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+.header .carousel-inner .text p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    width: 55%;
+}
+.header .carousel-inner .text a {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: .7rem 2.3rem;
+    border-radius: 3rem;
+    transition: background-color 5ms ease;
+    margin: 1rem;
+}
+.header .carousel-inner .text .btn1 {background-color: var(--primaryColor);}
+.header .carousel-inner .text .btn2 {
+    border: white 2px solid;
+    background-color: transparent;
+    padding: .7rem 2.8rem;
+}
+.header .carousel-text .text .btn2:hover {
+    background-color: var(--primaryColor);
+    border-color: transparent;
+}
+/* IMG */
+.header .carousel-item {
+    min-height: calc(100vh - 5rem);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.header .carousel-1 {
+    background-image: url(../imgs/ecommerce-cover-2.jpg);
+}
+.header .carousel-2 {
+    background-image: url(../imgs/slider1.jpg);
+}
+.header .carousel-3 {
+    background-image: url(../imgs/slider2.jpg);
+}
+.header .carousel-4 {
+    background-image: url(../imgs/slider3.jpg);
+}
+/* ABOUT  */
+.about .text {
+    left: -4%;
+    top: 5%;
+    max-width: 23rem;
+}
+.about .text h4 {
+    font-size: 1.3rem;
+}
+.about .text p {
+    font-size: .9rem;
+}
+.about .btn {
+    font-size: .9rem;
+    background-color: var(--primaryColor)!important;
+}
+/* Numbers  */
+.numbers i {color: var(--primaryColor); }
+.numbers p {font-size: 2.2rem;}
+/* Services  */
+.one-serve, .serve-overlay {
+    height: 250px;
+    border: 1px solid #6a6968;
+}
+.one-serve i {font-size: 3.125rem;}
+.one-serve h4 {font-size: 1.7rem;}
+.serve-overlay {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    animation-name: serve;
+    animation-duration: .3s;
+    transition: all .3s ease-in-out;
+}
+.layer:hover .serve-overlay {
+    display: block !important;
+    top: 0%;
+    cursor: pointer;
+}
+@keyframes serve {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+.our-services .btn {
+    background-color: var(--primaryColor);
+    font-size: .9rem;
+}
+/* WORK  */
+.our-work .nav-tabs {--bs-nav-tabs-border-width:0!important;}
+.our-work .nav-link{color: black;}
+.our-work .active{color: var(--primaryColor) !important;}
+.our-work .layer .text {
+    width: 95%;
+    margin: auto;
+    left: 1%;
+    right: 1%;
+    bottom: 3%;
+    transform: rotateY(90deg);
+    transition: all .3s ease;
+    background-color: rgba(12, 101, 237, .7);
+}
+.one-work:hover .text {transform: rotateY(0deg);}
+.our-work .layer .text p {font-size: .8rem;}
+/* .our-work .overlay{
+    background-color: var(--primaryColor);
+    opacity: .5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+} */
+.our-work .one-work:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: .4rem;
+}
+/* CRETIVE TEAM */
+.creativeT-overlay {
+    position: absolute;
+    top: 80.15%;
+    width: 100%;
+    height: 100%;
+    animation-name: creative;
+    animation-duration: .3s;
+    transition: all .3s ease-in-out;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.layer:hover .creativeT-overlay {
+    display: block !important;
+    top: 50%;
+}
+@keyframes creative {
+    0% {
+        top: 80%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+.creativeT-overlay .line-hr {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+.layer:hover .line-hr {display: none;}
+.creativeT-overlay h4{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.creativeT-overlay p,.creativeT-overlay h6 {
+    font-size: .9rem;
+    font-weight: 500;
+}
+.creativeT-overlay h6 {color: var(--primaryColor);}
+.creativeT-overlay .icons{
+    background-color: var(--primaryColor)!important;
+}
+.creativeT-overlay .icons i:hover {
+    color: black;
+    cursor: pointer;
+}
+/* BLACK DIVIDER  */
+.black-divider input::placeholder{font-size:.9rem ;}
+.black-divider .form-control{ padding: .7rem 1.5rem; }
+.black-divider .right .btn{
+    padding: .9rem 2rem ;
+    background-color: var(--primaryColor)!important;
+    font-size: 1.125rem;
+}
+/* TESTMONIAL */
+#owl-demo .item img{display: block;}
+#owl-demo .item h5{font-size: 1.125rem; font-size: 500;}
+#owl-demo .item span{font-size: .8rem; 
+    font-size: 500; 
+    margin: 1rem 0; 
+    color: var(--primaryColor);
+}
+#owl-demo .item p{font-size: .9rem;line-height:1.3rem ; }
+
+/* BLOG  */
+.blog .right-card h5{font-size: 1.125rem; 
+    font-weight: 600; 
+    transition: all .2s ease-in-out;
+}
+.blog .right-card h5:hover{color: var(--primaryColor); cursor: pointer;}
+.blog .right-card .user i, .blog .right-card .user span {font-size: .8rem;}
+.blog .right-card .user i:hover, .blog .right-card .user span:hover {
+    color: var(--primaryColor)!important ;
+    cursor: pointer;
+}
+.blog .right-card .date i, .blog .right-card .date span {font-size: .8rem;}
+.blog .right-card .date i:hover, .blog .right-card .date span:hover {
+    color: var(--primaryColor)!important ;
+    cursor: pointer;
+}
+.blog .right-card p{ font-size: .9rem; }
+.blog .right-card a{
+    font-size: .9rem; 
+    font-weight: 500; 
+    text-decoration: none;
+    color: black;
+}
+.blog .line{
+    width: 100%;
+    height: 1.5px;
+    background-color: gainsboro;
+}
+.blog .line .line-above{
+    width: 30%;
+    height: 1.5px;
+    background-color: var(--primaryColor);
+    transition: all .4s ease-in;
+}
+.blog .inner .img-blog{
+    transition: all 3s ease-in;
+    overflow: hidden;
+}
+.blog .inner:hover img{
+transform: scale(1.2,1.2) rotate(-8deg);
+}
+.blog .inner:hover {cursor: pointer;}
+.blog .inner:hover .line-above{width: 100%;}
+.blog .inner:hover .icons{transition: all .3s ease;}
+.blog .inner:hover .icons{
+    background-color: var(--primaryColor) !important;
+}
+.blog .inner .read-more:hover i{margin-left: 5% !important;}
+/* CLIENTS  */
+.clients .one-img {
+    height: 160px;
+    border: 1px solid #6a6968;
+    border-radius: 6px;
+}
+/* FOOTER  */
+.footer .up {
+    background-color: var(--primaryColor);
+}
+.footer .up .call{
+    top: -80%;
+    left: -4%;
+    opacity: .2;
+}
+.footer p{font-size: 1.7rem;}
+.footer .btn{
+    font-size: 1.1rem; 
+    color: var(--primaryColor);
+}
+/* ==== */
+.footer .down{background-color: #1a1a1a;;}
+.footer .line{
+    height: 2px;
+    width: 20%;
+    background-color: var(--primaryColor);
+}
+.footer .down .posts h6{font-size: .9rem;} 
+.footer .down .posts li{font-size: .6rem;} 
+.footer .down .posts span{font-size: .85rem;} 
+.footer .down .hr{
+    height: .5px;
+    width: 93%;
+    background-color: gray;
+}
+.footer .down .popular .btn{font-size: .72rem;  transition: all .5s;}
+.popular a:hover .btn{
+    background-color: var(--primaryColor)!important;
+    color: white !important;
+}
+.footer .copy-rights p{
+    box-shadow: 0 20px 10px -20px rgba(0,0,0,0.45) inset;
+    color: var(--primaryColor)!important;
+    font-size: .9rem;
+}
+/* ********************************************* */
